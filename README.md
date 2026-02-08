@@ -13,7 +13,7 @@ I implemented a three-pillar audit to transform the model from a biased predicto
  * Action: Performed a single-pass outlier removal on Career_Gap_Months while retaining moderate edge cases.
  * Why: This raised the AIR from 0.62 to 0.707 while ensuring the model remained realistic and robust.
 2. Statistical Stabilization (VIF Audit)
- * Action: Identified and removed Technical_Score (26.05) and KPI_Completion_Pct (26.55) due to extreme Multicollinearity (VIF > 26).
+ * Action: Identified and removed Technical_Score (25.93) and KPI_Completion_Pct (26.17) due to extreme Multicollinearity (VIF > 26).
  * Why: High VIF values indicate redundant features that destabilize model weights. Removing them ensured the model's coefficients were mathematically reliable.
 3. Proxy Decoupling
  * Action: Analyzed the feature correlation matrix to identify "hidden" bias.
@@ -30,7 +30,7 @@ Fairness Progress (AIR Improvement)
 |---|---|---|---|
 | F1-Score | 99.78% | 94.67% | High Reliability ✅ |
 | AIR (Fairness) | 0.62 | 0.707 | Equity Gain (+14%) 📈 |
-| Max VIF | 26.56 | < 7.0 | Mathematically Stable ✅ |
+| Max VIF | 26.17 | < 5.0 | Mathematically Stable ✅ |
 
 🧠 Conclusion: The "Fairness Ceiling"
 The audit successfully improved hiring equity by 14%. However, the final AIR of 0.707 reveals a "Fairness Ceiling"—a point where mathematical fixes cannot fully overcome structural bias in historical labels.
