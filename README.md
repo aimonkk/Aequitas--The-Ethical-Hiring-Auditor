@@ -32,6 +32,15 @@ Fairness Progress (AIR Improvement)
 | AIR (Fairness) | 0.62 | 0.707 | Equity Gain (+14%) 📈 |
 | Max VIF | 26.17 | < 5.0 | Mathematically Stable ✅ |
 
+### Fairness Audit: AIR Comparison
+![AIR Comparison Chart](air_comparison.png)
+
+### Feature Correlation Heatmap
+![Correlation Heatmap](correlation_heatmap.png)
+
+### Feature Importance
+![Feature Importance](feature_importance.png)
+
 🧠 Conclusion: The "Fairness Ceiling"
 The audit successfully improved hiring equity by 14%. However, the final AIR of 0.707 reveals a "Fairness Ceiling"—a point where mathematical fixes cannot fully overcome structural bias in historical labels.
 Key Takeaway: For a model to reach the 0.80 gold standard, the data collection process itself must be improved at the source. This project serves as evidence that Ethical AI requires auditing the integrity of the data foundation, not just the code.
