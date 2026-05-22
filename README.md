@@ -2,6 +2,15 @@
 Aequitas: The Ethical Hiring Auditor ⚖️
 Aequitas is a machine learning auditing project designed to detect and mitigate systemic bias in recruitment datasets. This project demonstrates the "Fairness-Accuracy Paradox"—the challenge of balancing high predictive performance with legal equity in automated hiring.
 
+## ⚠️ Data Disclaimer
+
+The dataset used in this project (`hiring_audit_data_2026.csv`) was **synthetically 
+generated** for the purpose of this audit. The gender bias (baseline AIR: 0.62) was 
+**intentionally embedded** into the data to create a controlled environment for 
+demonstrating the bias detection pipeline. This is not accidental or real-world data — 
+it was designed this way to provide a clear, reproducible example of how historical 
+discrimination can poison a hiring model.
+
 📊 The Challenge: "The Bias Mirror"
 Initial exploratory data analysis (EDA) revealed that the raw historical data was deeply "poisoned" by human prejudice:
  * Baseline AIR: 0.62. (Women were hired at only 62% of the rate of men, failing the legal 80% Rule).
@@ -32,14 +41,18 @@ Fairness Progress (AIR Improvement)
 | AIR (Fairness) | 0.62 | 0.707 | Equity Gain (+14%) 📈 |
 | Max VIF | 26.17 | < 5.0 | Mathematically Stable ✅ |
 
+
 ### Fairness Audit: AIR Comparison
 ![AIR Comparison Chart](air_comparison.png)
+
 
 ### Feature Correlation Heatmap
 ![Correlation Heatmap](correlation_heatmap.png)
 
+
 ### Feature Importance
 ![Feature Importance](feature_importance.png)
+
 
 🧠 Conclusion: The "Fairness Ceiling"
 The audit successfully improved hiring equity by 14%. However, the final AIR of 0.707 reveals a "Fairness Ceiling"—a point where mathematical fixes cannot fully overcome structural bias in historical labels.
